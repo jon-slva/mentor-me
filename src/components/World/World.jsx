@@ -1,11 +1,11 @@
 import clouds from '../../assets/fair_clouds_4k.png'
 import Globe from 'react-globe.gl';
-import map from '../../assets/earth-blue-marble.jpg'
+import map from '../../assets/2_no_clouds_4k.jpg'
 import bump from '../../assets/elev_bump_4k.jpg'
 import bgImage from '../../assets/galaxy_starfield.png'
 import * as THREE from 'three';
 const { useEffect, useRef } = React;
-
+import React from 'react';
 
 
 const World = () => {
@@ -16,12 +16,12 @@ const World = () => {
         
         // Auto-rotate
         globe.controls().autoRotate = true;
-        globe.controls().autoRotateSpeed = 0.35;
+        globe.controls().autoRotateSpeed = 0.20;
         
         // Add clouds sphere
         const CLOUDS_IMG_URL = clouds;
         const CLOUDS_ALT = 0.004;
-        const CLOUDS_ROTATION_SPEED = -0.006; // deg/frame
+        const CLOUDS_ROTATION_SPEED = -0.010; // deg/frame
 
         new THREE.TextureLoader().load(CLOUDS_IMG_URL, cloudsTexture => {
         const clouds = new THREE.Mesh(
