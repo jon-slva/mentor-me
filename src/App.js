@@ -9,6 +9,7 @@ import React from 'react';
 import * as THREE from 'three';
 const { useEffect, useRef } = React;
 
+// this should be refactored
 
 function App() {
   const World = () => {
